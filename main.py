@@ -216,6 +216,12 @@ class BigBlueButtonBot:
                         result = "success"
                         break    
 
+            # Take screenshots for 10 seconds before closing
+            log("Success! capturing final screenshots for 10 seconds...")
+            for i in range(10):
+                gui.screenshot(f"final_{i}.png")
+                time.sleep(1)
+
             browser.close()
             
         return result
