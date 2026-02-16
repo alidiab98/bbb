@@ -208,7 +208,7 @@ class BigBlueButtonBot:
                         gui.refresh()
                         time.sleep(5)
                         
-                        target = gui.search('bigbluebutton/cancel')
+                        target = gui.search('bigbluebutton/modal_exit')
                         if target is not None:
                             gui.click(target)
                             time.sleep(1)
